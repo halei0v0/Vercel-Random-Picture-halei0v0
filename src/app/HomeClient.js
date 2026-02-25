@@ -11,10 +11,8 @@ export default function HomeClient({ images }) {
 
   useEffect(() => {
     setOrigin(window.location.origin);
-    // 首页完全禁止滚动，彻底解决滚动条闪烁
     document.body.style.overflow = 'hidden';
     
-    // 直接从传入的 images 中随机挑选，大幅减少边缘 API 请求
     const allImages = [...(images.pc || []), ...(images.mobile || [])];
     if (allImages.length > 0) {
       const randomImg = allImages[Math.floor(Math.random() * allImages.length)];
@@ -110,8 +108,6 @@ export default function HomeClient({ images }) {
       <footer className="fixed bottom-8 left-0 right-0 z-20 flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity duration-500">
         <div className="flex items-center gap-4 text-[10px] font-bold tracking-[0.2em] uppercase text-white">
           <a href="https://tianhw.top" target="_blank" className="text-inherit no-underline hover:text-white transition-colors">THW</a>
-          <span className="w-1 h-1 bg-white/30 rounded-full" />
-          <a href="https://github.com/H2O-ME/EdgeOne-Random-Picture" target="_blank" className="text-inherit no-underline hover:text-white transition-colors">GitHub</a>
         </div>
         <div className="text-[9px] text-white/30 font-medium">
           © {new Date().getFullYear()} Powered by EdgeOne Pages

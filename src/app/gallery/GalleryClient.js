@@ -247,7 +247,7 @@ export default function GalleryClient({ initialImages }) {
       )}
 
       <footer className="p-12 text-center opacity-40 text-sm border-t border-neutral-200 dark:border-white/5">
-        <p>© {new Date().getFullYear()} <a href="https://tianhw.top" target="_blank" className="text-inherit no-underline hover:opacity-100 transition-colors">THW</a>. Powered by <a href="https://github.com/H2O-ME/EdgeOne-Random-Picture" target="_blank" className="text-inherit no-underline hover:opacity-100 transition-colors">EdgeOne Pages</a></p>
+        <p>© {new Date().getFullYear()} <a href="https://tianhw.top" target="_blank" className="text-inherit no-underline hover:opacity-100 transition-colors">THW</a>. Powered by EdgeOne Pages</p>
       </footer>
     </div>
   );
